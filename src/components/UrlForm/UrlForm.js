@@ -19,8 +19,7 @@ class UrlForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const badUrl = (this.state.urlToShorten.includes(' ') || !this.state.urlToShorten.includes('@') || !this.state.urlToShorten.includes('.'))
-    if (!this.state.title || !this.state.urlToShorten || badUrl) {
+    if (!this.state.title || !this.state.urlToShorten) {
       this.setState({ formError: true });
     } else {
       this.setState({ serverError: false, formError: false });
